@@ -1,4 +1,7 @@
 export function MedalList({medals, onDelete}) {
+    if (medals.length === 0) {
+        return null; // medals 배열이 비어있으면 아무것도 렌더링 안됨.
+    }
     return (
         <table>
             <thead>
