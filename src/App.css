@@ -1,6 +1,7 @@
 body {
-  font-family:  'Arial', sans-serif;
-  background-color: #f6f7fc; /* 배경 색 */
+  font-family: 'Arial', sans-serif;
+  background-color: #f6f7fc;
+  /* 배경 색 */
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,15 +11,16 @@ body {
 }
 
 .container {
-  width: 80%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 800px;
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 30px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+/* 제목 스타일 */
 h1 {
   color: #003366;
   margin-bottom: 20px;
@@ -26,68 +28,92 @@ h1 {
   font-weight: bold;
 }
 
+/* 폼 스타일 */
 form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 20px;
-  gap: 10px;
+  gap: 20px;
 }
 
-form input[type="text"], form input[type="number"] {
-  width: 18%;
+/* 입력 필드 스타일 */
+form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  margin-top: 5px;
   padding: 8px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 14px;
 }
 
+/* 버튼 스타일일 */
 form button {
+  grid-column: span 2; /* 버튼이 두 칸 차지하도록 설정 */
   background-color: #ffd700;
   border: none;
-  padding: 10px 15px;
+  padding: 12px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   color: #003366;
+  text-align: center;
 }
 
 form button:hover {
   background-color: #ffcc00;
 }
 
-.table {
+/* 레이블 스타일 */
+table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-.table th, .table td {
+thead th {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+tbody td {
+  background-color: #e9f0ff;
   padding: 10px;
   text-align: center;
 }
 
-.table th {
-  background-color: #003366;
-  color: white;
-  font-weight: bold;
+tbody tr:nth-child(even) {
+  background-color: #f3f7ff;
 }
 
-.table td {
-  background-color: #e9f0ff;
+tbody tr td:last-child {
+  text-align: center;
 }
 
-.table .delete-btn {
+/* 삭제 버튼 스타일 */
+.delete-btn {
   background-color: #ff4d4d; /* 삭제 버튼 */
   color: white;
   border: none;
   padding: 5px 10px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.table .delete-btn:hover {
+.delete-btn:hover {
   background-color: #ff1a1a;
 }
